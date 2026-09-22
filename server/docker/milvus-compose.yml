@@ -1,0 +1,135 @@
+# ============================================================
+# Milvus standalone 编排（RAG 知识库的向量存储层）
+# ------------------------------------------------------------
+# 用途：一条命令拉起「向量数据库 + 元数据 + 对象存储」三件套
+# 启动（在 server/docker/ 目录下执行）：
+#     docker compose -f milvus-compose.yml up -d
+# 停止（保留数据卷）：
+#     docker compose -f milvus-compose.yml down
+# 停止并删除数据（⚠️ 会清空整个知识库，需重新灌库）：
+#     docker compose -f milvus-compose.yml down -v
+#
+# 版本选择依据（2026-08 官方数据）：
+#     Milvus 2.6.22 —— 当前 2.6.x 线最新补丁版；
+#     ⚠️ 禁止使用 2.5.27 以下 / 2.6.0~2.6.9：存在 CVE-2026-26190
+#        （CVSS 9.8，未认证可通过 9091 指标端口访问 REST API）
+#     ⚠️ pymilvus 必须与 Milvus「同代」：服务端 2.6.x 对应 pymilvus 2.6.x
+#        （见 server/requirements-rag.txt 中锁定的 2.6.17）
+#
+# 端口说明：
+#     19530 —— gRPC 接口，Python 客户端（pymilvus）连这个
+#     9091  —— HTTP 健康检查 / 指标
+#     9000/9001 —— MinIO 对象存储 API / 控制台（排查问题用，可关）
+#     8001  —— Attu 可视化管理界面（需加 --profile gui 才启动）
+#
+# 与 WSL2 的关系：
+#     Docker Desktop 使用 WSL2 后端时，Windows 侧通过 localhost:19530
+#     即可直连容器（Docker Desktop 自动做端口映射），
+#     因此 FastAPI 跑在 Windows、Milvus 跑在 WSL 容器里，两者可直接通信。
+# ============================================================
+
+name: milvus-rag
+
+services:
+  # ---------- 元数据存储：保存 collection schema、索引元信息、集群状态 ----------
+  etcd:
+    container_name: milvus-etcd
+    image: quay.io/coreos/etcd:v3.5.18
+    restart: unless-stopped
+    environment:
+      # 自动压缩：按版本号保留最近 1000 条修订，防止 etcd 无限膨胀
+      - ETCD_AUTO_COMPACTION_MODE=revision
+      - ETCD_AUTO_COMPACTION_RETENTION=1000
+      # 后端存储配额 4GB（超过会告警，正常开发用不到）
+      - ETCD_QUOTA_BACKEND_BYTES=4294967296
+      - ETCD_SNAPSHOT_COUNT=50000
+    volumes:
+      # 数据落在宿主机 ./volumes/etcd，删容器不丢数据
+      - ./volumes/etcd:/etcd
+    # --data-dir 指向挂载目录；listen 0.0.0.0 便于容器网络内访问
+    command: etcd -advertise-client-urls=http://etcd:2379 -listen-client-urls http://0.0.0.0:2379 --data-dir /etcd
+    healthcheck:
+      test: ["CMD", "etcdctl", "endpoint", "health"]
+      interval: 30s
+      timeout: 20s
+      retries: 3
+    networks:
+      - milvus-net
+
+  # ---------- 对象存储：保存向量数据段与索引文件本体 ----------
+  minio:
+    container_name: milvus-minio
+    image: minio/minio:RELEASE.2024-12-18T13-15-44Z
+    restart: unless-stopped
+    environment:
+      # ⚠️ 仅本地开发用的默认口令；若要暴露到局域网，务必改成强口令
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+      # 兼容旧版 Milvus 配置项（部分镜像仍读这两个变量）
+      MINIO_ACCESS_KEY: minioadmin
+      MINIO_SECRET_KEY: minioadmin
+    ports:
+      - "9000:9000"    # S3 API
+      - "9001:9001"    # 控制台：http://localhost:9001 （minioadmin/minioadmin）
+    volumes:
+      - ./volumes/minio:/minio_data
+    command: minio server /minio_data --console-address ":9001"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 30s
+      timeout: 20s
+      retries: 3
+    networks:
+      - milvus-net
+
+  # ---------- Milvus standalone：向量数据库主体（单节点，含 query/data/index 全部角色） ----------
+  standalone:
+    container_name: milvus-standalone
+    image: milvusdb/milvus:v2.6.22
+    restart: unless-stopped
+    command: ["milvus", "run", "standalone"]
+    security_opt:
+      # Milvus 官方要求：容器内需放开 seccomp 限制，否则可能启动失败
+      - seccomp:unconfined
+    environment:
+      ETCD_ENDPOINTS: etcd:2379
+      MINIO_ADDRESS: minio:9000
+    volumes:
+      - ./volumes/milvus:/var/lib/milvus
+    ports:
+      - "19530:19530"  # Python 客户端连接口
+      - "9091:9091"    # 健康检查
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9091/healthz"]
+      interval: 30s
+      start_period: 90s   # Milvus 首启较慢，给足 90 秒再计入健康判定
+      timeout: 20s
+      retries: 3
+    depends_on:
+      etcd:
+        condition: service_healthy
+      minio:
+        condition: service_healthy
+    networks:
+      - milvus-net
+
+  # ---------- Attu：可视化管理界面（可选，默认不启动） ----------
+  # 启动方式：docker compose -f milvus-compose.yml --profile gui up -d
+  # 访问：http://localhost:8001 （在界面里填 http://milvus-standalone:19530 连接）
+  attu:
+    container_name: milvus-attu
+    image: zilliz/attu:v2.6
+    profiles: ["gui"]
+    restart: unless-stopped
+    environment:
+      MILVUS_URL: milvus-standalone:19530
+    ports:
+      - "8001:3000"
+    depends_on:
+      - standalone
+    networks:
+      - milvus-net
+
+networks:
+  milvus-net:
+    driver: bridge

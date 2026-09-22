@@ -1,0 +1,40 @@
+# ============================================================
+# RAG 扩展依赖清单（可选安装，不装也不影响原有服务运行）
+# ------------------------------------------------------------
+# 安装（在 server/ 目录下执行）：
+#     .venv/Scripts/pip.exe install -r requirements-rag.txt
+#
+# ⚠️ 换源提示：国内官方源下载 PyTorch 很慢，建议加国内镜像，
+#    但注意部分镜像对个别包会返回 403，失败就去掉 -i 用官方源：
+#     .venv/Scripts/pip.exe install -r requirements-rag.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+#
+# 版本对应关系（2026-08 官方数据，务必保持同代）：
+#     ⚠️ pymilvus 与服务端 Milvus 必须同代
+#        （当前项目本地容器用的是 milvusdb/milvus:v2.5.27，
+#          pymilvus 2.6.x 客户端向后兼容 2.5 服务端，已验证 BM25 + 混合检索可用）
+#     ⚠️ 已知漏洞版本：Milvus < 2.5.27 或 2.6.0~2.6.9 存在 CVE-2026-26190
+#        （CVSS 9.8，未认证可通过 9091 指标端口访问 REST API），切勿使用
+# ============================================================
+
+# ---------- 必装：向量数据库客户端 ----------
+# 两种向量化方式都需要它（本地模型 / 云端 API 都要连 Milvus）
+pymilvus==2.6.17
+
+# ---------- 必装：图数据库客户端（GraphRAG 用） ----------
+# Neo4j 官方 Python 驱动（Bolt 协议）。
+# ⚠️ 版本说明：驱动 6.x 兼容 Neo4j 5.x / 2026.x 服务端；
+#    当前项目本机 Neo4j 为 2026.08.1（Windows 服务，端口 7687）。
+#    只做图谱检索/写入时它是本文件里唯一的图侧依赖，很轻量（附带 pytz）。
+neo4j==6.3.0
+
+# ---------- 按需装：仅「本地模型」模式需要 ----------
+# 当 RAG_EMBED_PROVIDER=api（云端向量化）且 RAG_RERANK_ENABLED=false 时，
+# 下面这组依赖【完全不需要】，可注释掉，省下约 2GB 的 PyTorch。
+#
+# 体积提示：sentence-transformers 会连带安装 PyTorch（CPU 版约 200MB）
+# 不锁死小版本，避免与本地已装 torch 冲突；如需固定请自行加 ==
+# sentence-transformers>=3.0.0
+#
+# ---------- 说明：云端模式下无需新增任何依赖 ----------
+# API 向量化复用 requirements.txt 里已有的 openai SDK（OpenAI 兼容协议），
+# 因此选云端方案时，本文件实际只需安装 pymilvus 一项。

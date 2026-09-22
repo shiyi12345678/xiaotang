@@ -1,0 +1,309 @@
+{
+	"easycom": {
+		"autoscan": true,
+		"custom": {
+			"^uni-(.*)": "@/uni-ui/uni-$1/uni-$1.vue",
+			"^zn-(.*)": "@/components/zn-$1/zn-$1.vue"
+		}
+	},
+	"pages": [
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "直聘通",
+				"enablePullDownRefresh": true,
+				"backgroundColorTop": "#00A6A7",
+				"backgroundColorBottom": "#f5f7fa"
+			}
+		},
+		{
+			"path": "pages/job/list",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "职位",
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 80
+			}
+		},
+		{
+			"path": "pages/job/search",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "搜索职位",
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 80
+			}
+		},
+		{
+			"path": "pages/job/detail",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "职位详情"
+			}
+		},
+		{
+			"path": "pages/job/referral",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "名企内推",
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 80
+			}
+		},
+		{
+			"path": "pages/seeker/center",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "求职中心",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/seeker/applications",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "我的投递",
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 80
+			}
+		},
+		{
+			"path": "pages/seeker/favorites",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "我的收藏",
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 80
+			}
+		},
+		{
+			"path": "pages/seeker/resume",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "简历管理"
+			}
+		},
+		{
+			"path": "pages/seeker/report",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "求职报告",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/seeker/interview",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "面试日程",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/bank/list",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "面试题库",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/bank/practice",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "刷题"
+			}
+		},
+		{
+			"path": "pages/bank/wrong",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "薄弱点复盘",
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 80
+			}
+		},
+		{
+			"path": "pages/ai/ai",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "AI 求职助手",
+				"disableScroll": true
+			}
+		},
+		{
+			"path": "pages/ai/session",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "会话详情"
+			}
+		},
+		{
+			"path": "pages/chat/chat",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "沟通"
+			}
+		},
+		{
+			"path": "pages/mine/message",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "消息",
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 80
+			}
+		},
+		{
+			"path": "pages/mine/mine",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "我的",
+				"enablePullDownRefresh": true,
+				"backgroundColorTop": "#00A6A7",
+				"backgroundColorBottom": "#f5f7fa"
+			}
+		},
+		{
+			"path": "pages/mine/settings",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "设置"
+			}
+		},
+		{
+			"path": "pages/mine/agreement",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "协议与政策"
+			}
+		},
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "登录"
+			}
+		},
+		{
+			"path": "pages/hr/dashboard",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "招聘工作台",
+				"enablePullDownRefresh": true,
+				"backgroundColorTop": "#00A6A7",
+				"backgroundColorBottom": "#f5f7fa"
+			}
+		},
+		{
+			"path": "pages/hr/jobs",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "职位管理",
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 80
+			}
+		},
+		{
+			"path": "pages/hr/job-edit",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "发布职位"
+			}
+		},
+		{
+			"path": "pages/hr/applications",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "收到简历",
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 80
+			}
+		},
+		{
+			"path": "pages/hr/candidate",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "候选人详情"
+			}
+		},
+		{
+			"path": "pages/hr/interviews",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "面试安排",
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 80
+			}
+		},
+		{
+			"path": "pages/hr/company",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "企业主页"
+			}
+		},
+		{
+			"path": "pages/hr/bind",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "绑定公司"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "直聘通",
+		"navigationBarBackgroundColor": "#ffffff",
+		"backgroundColor": "#f5f7fa",
+		"app-plus": {
+			"background": "#f5f7fa"
+		}
+	},
+	"condition": {
+		"current": 0,
+		"list": [
+			{
+				"name": "职位首页",
+				"path": "pages/index/index"
+			},
+			{
+				"name": "职位列表",
+				"path": "pages/job/list"
+			},
+			{
+				"name": "职位详情",
+				"path": "pages/job/detail"
+			},
+			{
+				"name": "求职中心",
+				"path": "pages/seeker/center"
+			},
+			{
+				"name": "简历管理",
+				"path": "pages/seeker/resume"
+			},
+			{
+				"name": "面试题库",
+				"path": "pages/bank/list"
+			},
+			{
+				"name": "AI 求职助手",
+				"path": "pages/ai/ai"
+			},
+			{
+				"name": "HR 工作台",
+				"path": "pages/hr/dashboard"
+			},
+			{
+				"name": "收到简历",
+				"path": "pages/hr/applications"
+			},
+			{
+				"name": "登录",
+				"path": "pages/login/login"
+			}
+		]
+	}
+}

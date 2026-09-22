@@ -1,0 +1,90 @@
+# ============================================================
+# Neo4j 单机编排（GraphRAG 知识图谱的图存储层）
+# ------------------------------------------------------------
+# 用途：一键拉起图数据库（Bolt + Browser），供 AI 助教做图谱检索。
+#
+# ⚠️ 重要：本机【已经】装了 Windows 服务版 Neo4j
+#    服务名 neo4j，安装目录 D:\cheng du shi xi\neo4j-community-2026.08.1，
+#    占用同样的 7474 / 7687 端口。因此：
+#      · 默认走「本机服务版」即可，本文件是【备选方案】（换机器、要隔离环境时用）；
+#      · 两者不要同时启动，否则端口冲突。要改用 Docker 版：
+#          1) 管理员 PowerShell：Stop-Service neo4j; Set-Service neo4j -StartupType Manual
+#          2) 启动本编排
+#      · .env 里 NEO4J_URI 保持 bolt://127.0.0.1:7687 不用改（端口映射后地址一致）。
+#
+# 启动（在 server/ 目录下执行，直接复用 .env 里的 NEO4J_PASSWORD）：
+#     docker compose --env-file .env -f docker/neo4j-compose.yml up -d
+# 查看状态 / 日志：
+#     docker compose -f docker/neo4j-compose.yml ps
+#     docker compose -f docker/neo4j-compose.yml logs -f neo4j
+# 停止（保留数据卷）：
+#     docker compose -f docker/neo4j-compose.yml down
+# 停止并删除数据（⚠️ 会清空整个图谱，需重新灌图）：
+#     docker compose -f docker/neo4j-compose.yml down -v
+#
+# 版本选择依据：
+#     与「服务版安装」保持同一主版本线，避免驱动/语法差异
+#     （当前项目服务端为 Neo4j 2026.08.1 community，
+#       驱动见 server/requirements-rag.txt 锁定的 neo4j==6.3.0）。
+#     若该 tag 在你的镜像源里不存在，请改成同版本的实际 tag，
+#     或通过环境变量覆盖：NEO4J_IMAGE=neo4j:2026.08-community
+#
+# 端口说明：
+#     7687 —— Bolt 协议，Python 驱动（neo4j）连这个，即 .env 里的 NEO4J_URI
+#     7474 —— HTTP / Neo4j Browser（可视化看图谱、手工跑 Cypher）
+# ============================================================
+
+name: neo4j-graphrag
+
+services:
+  neo4j:
+    container_name: neo4j-graphrag
+    image: ${NEO4J_IMAGE:-neo4j:2026.08.1-community}
+    restart: unless-stopped
+
+    environment:
+      # ⚠️ 账号密码：格式必须是 user/password。
+      #    ${NEO4J_PASSWORD:?...} 表示「没提供就报错退出」，
+      #    避免容器以默认密码 neo4j/neo4j 悄悄跑起来。
+      NEO4J_AUTH: neo4j/${NEO4J_PASSWORD:?请在 .env 或环境变量中设置 NEO4J_PASSWORD}
+
+      # 内存：本地开发/演示够用即可；正式环境按官方 memrec 调整
+      # （Neo4j 5+ 的配置项用双下划线表示原本的下划线）
+      NEO4J_server_memory_heap_initial__size: 512m
+      NEO4J_server_memory_heap_max__size: 1G
+      NEO4J_server_memory_pagecache_size: 512m
+
+      # 监听地址：容器内放开，宿主机通过端口映射访问
+      NEO4J_server_default__listen__address: 0.0.0.0
+
+      # 关掉匿名使用数据上报（与本机服务版保持一致，少一次外网请求）
+      NEO4J_dbms_usage__report_enabled: "false"
+
+      # 需要 APOC 之类的插件时打开（把 jar 放进 ./volumes/neo4j/plugins）
+      # NEO4J_PLUGINS: '["apoc"]'
+      # NEO4J_dbms_security_procedures_unrestricted: apoc.*
+
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+
+    volumes:
+      # 数据落宿主机：删容器不丢图谱（重新灌图也很快，但没必要）
+      - ./volumes/neo4j/data:/data
+      - ./volumes/neo4j/logs:/logs
+      - ./volumes/neo4j/import:/var/lib/neo4j/import
+      - ./volumes/neo4j/plugins:/plugins
+
+    # 健康检查：能跑通一条 Cypher 才算就绪（首启一般 30~60 秒）
+    healthcheck:
+      test: ["CMD-SHELL", "cypher-shell -u neo4j -p \"$$NEO4J_PASSWORD\" 'RETURN 1' || exit 1"]
+      interval: 10s
+      timeout: 10s
+      retries: 15
+      start_period: 60s
+
+    networks:
+      - graphrag-net
+
+networks:
+  graphrag-net:

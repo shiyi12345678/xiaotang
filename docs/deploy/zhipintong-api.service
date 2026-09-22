@@ -1,0 +1,45 @@
+# ==========================================================================
+#  直聘通 · 后端常驻服务（systemd）
+#  部署位置：/etc/systemd/system/zhipintong-api.service
+#  启用：
+#     sudo systemctl daemon-reload
+#     sudo systemctl enable --now zhipintong-api
+#     sudo systemctl status zhipintong-api
+#  日志：journalctl -u zhipintong-api -f
+#
+#  ⚠️ 必须按你的实际情况替换下面三处（均已用 TODO 标注）：
+#     1) User        —— 运行服务的普通用户（不要用 root 跑业务）
+#     2) WorkingDirectory / ExecStart —— 服务器上 server/ 目录的绝对路径
+# ==========================================================================
+
+[Unit]
+Description=ZhiPinTong FastAPI Backend (直聘通后端)
+# 等网络和 MySQL 就绪后再启动，避免开机时连不上库反复重启
+After=network.target mysql.service
+Wants=mysql.service
+
+[Service]
+Type=simple
+# TODO: 换成你的普通用户名，执行 `whoami` 可查看
+User=ubuntu
+# TODO: 换成 server 目录在服务器上的绝对路径
+WorkingDirectory=/home/ubuntu/zhipintong/server
+
+# ⚠️ 生产环境不要加 --reload：
+#    它会额外监听文件变化并占用内存，且异常退出行为与生产不符。
+# ⚠️ 只监听 127.0.0.1，由 Nginx 反代对外；不要把 8000 直接暴露到公网。
+# ⚠️ 低配服务器（2C2G）保持 --workers 1，加 worker 会显著抬升内存占用。
+ExecStart=/home/ubuntu/zhipintong/server/.venv/bin/python -m uvicorn app.main:app --host 127.0.0.1 --port 8000 --workers 1
+
+# 崩溃自动拉起（本项目启动时会连接数据库，网络抖动时也能自愈）
+Restart=always
+RestartSec=3
+# 优雅停止：给正在进行的 AI 流式请求留出收尾时间
+KillSignal=SIGINT
+TimeoutStopSec=15
+
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

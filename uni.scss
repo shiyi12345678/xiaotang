@@ -1,0 +1,137 @@
+/**
+ * 直聘通（招聘 App）—— 全局 SCSS 变量
+ * uni-app 会自动把本文件注入到每个组件的 <style lang="scss"> 中，无需手动 @import
+ * 注意：本文件只放「变量 / 混入」，不要写具体样式规则
+ * 主题色：#00A6A7（青绿）—— 2026-09-19 由学习端的 #4cd964 改为招聘端主色
+ *
+ * ⚠️ 变量名仍保留 zn- 前缀（历史命名，全项目 19 个页面 + 12 个组件都在用），
+ *    只改值不改名，避免一次性重命名带来几百处改动与漏改风险。
+ */
+
+/* ---------------- 主题色（本项目自定义 zn- 前缀） ---------------- */
+$zn-theme: #00a6a7; // 主色（青绿）
+$zn-theme-deep: #008c8d; // 主色-深（渐变收尾 / 按压态）
+$zn-theme-dark: #00696b; // 主色-最深（文字压在浅底上）
+$zn-theme-light: #e5f7f7; // 主色-浅底
+$zn-theme-lighter: #f2fbfb; // 主色-更浅底
+$zn-theme-soft: rgba(0, 166, 167, 0.12); // 主色-半透明
+$zn-gradient: linear-gradient(135deg, #33c4c5 0%, #00a6a7 45%, #008c8d 100%);
+$zn-gradient-soft: linear-gradient(180deg, #00a6a7 0%, #33c4c5 100%);
+$zn-gradient-gold: linear-gradient(135deg, #ffd66b 0%, #ff9f43 100%);
+
+/* 功能色 */
+$zn-price: #ff5c1a; // 薪资强调色（职位卡片上的大字号薪资）
+$zn-orange: #ff8f1f;
+$zn-red: #ff4d4f;
+$zn-blue: #3b9dff;
+$zn-purple: #8a6cf6;
+
+/* 文字色 */
+$zn-text-main: #1a1a1a;
+$zn-text-title: #222222;
+$zn-text-sub: #666666;
+$zn-text-grey: #999999; // 辅助信息（报名人数等）
+$zn-text-light: #bbbbbb;
+$zn-text-white: #ffffff;
+
+/* 背景 / 分割线 */
+$zn-bg-page: #f5f7fa;
+$zn-bg-card: #ffffff;
+$zn-bg-grey: #f2f4f7;
+$zn-line: #eef1f4;
+$zn-mask: rgba(0, 0, 0, 0.45);
+
+/* 圆角 */
+$zn-radius-xs: 8rpx;
+$zn-radius-sm: 12rpx;
+$zn-radius: 20rpx;
+$zn-radius-lg: 28rpx;
+$zn-radius-xl: 36rpx;
+$zn-radius-pill: 999rpx;
+
+/* 间距 */
+$zn-gap-xs: 8rpx;
+$zn-gap-sm: 16rpx;
+$zn-gap: 24rpx;
+$zn-gap-lg: 32rpx;
+$zn-page-padding: 24rpx;
+
+/* 字号 */
+$zn-font-xs: 20rpx;
+$zn-font-sm: 24rpx;
+$zn-font: 28rpx;
+$zn-font-md: 30rpx;
+$zn-font-lg: 34rpx;
+$zn-font-xl: 40rpx;
+$zn-font-price: 46rpx;
+
+/* 阴影 */
+$zn-shadow-sm: 0 4rpx 12rpx rgba(20, 40, 30, 0.04);
+$zn-shadow: 0 8rpx 24rpx rgba(20, 40, 30, 0.06);
+$zn-shadow-lg: 0 12rpx 36rpx rgba(20, 40, 30, 0.1);
+$zn-shadow-theme: 0 8rpx 20rpx rgba(0, 166, 167, 0.28);
+
+/* 底部 tabBar 高度（自定义 tabBar 用） */
+$zn-tabbar-height: 108rpx;
+
+/* ================================================================
+ * 以下为 uni-app / uni-ui 官方标准变量，uni-ui 组件强依赖，勿删
+ * ================================================================ */
+/* 行为相关颜色 */
+$uni-color-primary: #00a6a7;
+$uni-color-success: #00a6a7;
+$uni-color-warning: #f0ad4e;
+$uni-color-error: #dd524d;
+
+/* 文字基本颜色 */
+$uni-text-color: #333333;
+$uni-text-color-inverse: #ffffff;
+$uni-text-color-grey: #999999;
+$uni-text-color-placeholder: #b4b4b4;
+$uni-text-color-disable: #c0c0c0;
+
+/* 背景颜色 */
+$uni-bg-color: #ffffff;
+$uni-bg-color-grey: #f5f7fa;
+$uni-bg-color-hover: #f1f1f1;
+$uni-bg-color-mask: rgba(0, 0, 0, 0.4);
+
+/* 边框颜色 */
+$uni-border-color: #e5e5e5;
+
+/* 尺寸变量 */
+$uni-font-size-sm: 24rpx;
+$uni-font-size-base: 28rpx;
+$uni-font-size-lg: 32rpx;
+
+/* 图片尺寸 */
+$uni-img-size-sm: 40rpx;
+$uni-img-size-base: 52rpx;
+$uni-img-size-lg: 80rpx;
+
+/* 水平间距 */
+$uni-spacing-row-sm: 10rpx;
+$uni-spacing-row-base: 20rpx;
+$uni-spacing-row-lg: 30rpx;
+
+/* 垂直间距 */
+$uni-spacing-col-sm: 8rpx;
+$uni-spacing-col-base: 16rpx;
+$uni-spacing-col-lg: 24rpx;
+
+/* 透明度 */
+$uni-opacity-disabled: 0.3;
+
+/* 文章场景相关 */
+$uni-color-title: #2c405a;
+$uni-font-size-title: 40rpx;
+$uni-color-subtitle: #555555;
+$uni-font-size-subtitle: 36rpx;
+$uni-color-paragraph: #3f536e;
+$uni-font-size-paragraph: 30rpx;
+
+/* 圆角（uni-ui 需要） */
+$uni-border-radius-sm: 4rpx;
+$uni-border-radius-base: 6rpx;
+$uni-border-radius-lg: 12rpx;
+$uni-border-radius-circle: 50%;

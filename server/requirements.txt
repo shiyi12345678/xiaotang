@@ -1,0 +1,13 @@
+# 服务端依赖清单
+# 说明：技术选型与版本对齐参考资料《02.服务器/requirements.txt》实测环境
+# 安装：pip install -r requirements.txt
+fastapi==0.141.1
+uvicorn[standard]==0.52.4
+sqlalchemy==2.0.52
+aiomysql==0.3.2          # MySQL 异步驱动（SQLAlchemy 方言 mysql+aiomysql）
+cryptography==50.0.1     # MySQL8 caching_sha2_password 认证所需
+PyJWT==2.10.1
+bcrypt==5.0.0
+python-dotenv==1.0.1     # 读取 .env 配置（避免把密码写进源码）
+python-multipart==0.0.32 # AI 助教图片上传：FastAPI 解析 multipart/form-data 必需
+openai                   # AI 助教：DeepSeek 官方兼容 OpenAI 协议

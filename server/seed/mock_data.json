@@ -1,0 +1,2133 @@
+{
+  "adBanners": [
+    {
+      "id": "ad1",
+      "title": "AI 讲师招募计划",
+      "desc": "把你的经验变成课程，月入过万不是梦",
+      "btn": "立即报名",
+      "tag": "广告",
+      "link": "/pages/study/free"
+    },
+    {
+      "id": "ad2",
+      "title": "网易云课堂 会员卡",
+      "desc": "3000+ 好课免费学，年卡立省 1280 元",
+      "btn": "开通会员",
+      "tag": "广告",
+      "link": "/pages/mine/mine"
+    }
+  ],
+  "aiCapabilities": [
+    {
+      "icon": "camera",
+      "title": "拍照解题",
+      "desc": "拍下题目，逐步讲解",
+      "color": "#4cd964"
+    },
+    {
+      "icon": "sound",
+      "title": "口语陪练",
+      "desc": "AI 对话纠正发音",
+      "color": "#3b9dff"
+    },
+    {
+      "icon": "compose",
+      "title": "作文批改",
+      "desc": "评分 + 逐句修改建议",
+      "color": "#ff8f1f"
+    },
+    {
+      "icon": "medal",
+      "title": "错题复盘",
+      "desc": "讲清错因与同类题",
+      "color": "#8a6cf6"
+    }
+  ],
+  "aiConversations": [
+    {
+      "group": "今日",
+      "list": [
+        {
+          "id": "cv1",
+          "title": "帮我规划 30 天 AI 学习路线",
+          "time": "10:24",
+          "count": 12,
+          "pinned": true
+        },
+        {
+          "id": "cv2",
+          "title": "考研英语阅读总是错 3 个怎么办",
+          "time": "09:12",
+          "count": 8
+        }
+      ]
+    },
+    {
+      "group": "7 天内",
+      "list": [
+        {
+          "id": "cv3",
+          "title": "用 Python 批量处理 Excel 表格",
+          "time": "昨天",
+          "count": 21
+        },
+        {
+          "id": "cv4",
+          "title": "解释一下什么是 RAG 检索增强",
+          "time": "周三",
+          "count": 6
+        },
+        {
+          "id": "cv5",
+          "title": "帮我改一份述职报告的大纲",
+          "time": "周二",
+          "count": 15
+        }
+      ]
+    },
+    {
+      "group": "30 天内",
+      "list": [
+        {
+          "id": "cv6",
+          "title": "家庭教育：孩子写作业拖拉",
+          "time": "3 月 2 日",
+          "count": 18
+        },
+        {
+          "id": "cv7",
+          "title": "Figma 组件库怎么搭更规范",
+          "time": "2 月 26 日",
+          "count": 9
+        },
+        {
+          "id": "cv8",
+          "title": "帮我总结《默会知识》第三章",
+          "time": "2 月 20 日",
+          "count": 4
+        }
+      ]
+    },
+    {
+      "group": "更早",
+      "list": [
+        {
+          "id": "cv9",
+          "title": "初级会计备考顺序建议",
+          "time": "1 月 18 日",
+          "count": 11
+        },
+        {
+          "id": "cv10",
+          "title": "手机摄影夜景参数怎么调",
+          "time": "1 月 6 日",
+          "count": 7
+        }
+      ]
+    }
+  ],
+  "aiMockReply": "好的，我按「可执行」的方式给你拆一下：\n\n**1. 先定目标**\n把\"学 AI\"换成具体产出，比如\"能用 AI 独立完成一份数据周报\"。\n\n**2. 再拆动作**\n- 今天：梳理你每天重复 3 次以上的工作\n- 明天：挑其中 1 件，用 AI 跑通一次\n- 本周：把跑通的流程写成 5 条提示词模板\n\n**3. 最后固化**\n模板存进备忘录，下次直接套用，效率才会真正留下来。\n\n需要我针对你的岗位再细化一版吗？",
+  "aiReferences": [
+    {
+      "title": "提示词工程入门指南",
+      "source": "网易云课堂 · 陈墨白"
+    },
+    {
+      "title": "大模型能力边界白皮书（2025）",
+      "source": "公开资料"
+    },
+    {
+      "title": "AI 办公效率手册",
+      "source": "网易云课堂 · 周砚"
+    }
+  ],
+  "aiSessionMessages": [
+    {
+      "id": "m1",
+      "role": "user",
+      "content": "帮我规划一个 30 天的 AI 学习路线，我每天只有 1 小时。",
+      "time": "10:20"
+    },
+    {
+      "id": "m2",
+      "role": "assistant",
+      "content": "### 30 天 AI 学习路线（每天 1 小时）\n\n**第 1 周｜建立认知**\n- Day1-2：搞懂大模型能做什么、不能做什么\n- Day3-4：提示词四要素（角色 / 任务 / 约束 / 示例）\n- Day5-7：用 AI 完成 3 个真实工作任务\n\n**第 2 周｜工具上手**\n- 文档 / 表格 / PPT 三类 AI 工具各打通一个\n\n**第 3 周｜做小项目**\n- 用 AI + 剪映做一条 3 分钟知识视频\n\n**第 4 周｜固化工作流**\n- 沉淀自己的 10 条常用提示词模板\n\n> 建议：每天结束时写 3 行复盘，比多学 1 小时更重要。",
+      "time": "10:21",
+      "thinking": "已深度思考 8 秒"
+    }
+  ],
+  "aiWelcome": {
+    "greeting": "你好，我是网易云课堂 AI 助教",
+    "desc": "选课、答疑、做学习计划，随时找我",
+    "suggestions": [
+      {
+        "icon": "paperplane",
+        "title": "帮我制定学习计划",
+        "desc": "告诉我目标和每天可用时间"
+      },
+      {
+        "icon": "search",
+        "title": "推荐适合我的课程",
+        "desc": "说说你的基础和职业方向"
+      },
+      {
+        "icon": "help",
+        "title": "讲解一个知识点",
+        "desc": "可以上传题目截图问我"
+      },
+      {
+        "icon": "compose",
+        "title": "帮我批改作业 / 作文",
+        "desc": "拍照或粘贴内容即可"
+      }
+    ]
+  },
+  "banners": [
+    {
+      "id": "b1",
+      "title": "AI 数字技能 · 春季特训营",
+      "subtitle": "从 0 到 1 掌握 AI 办公与提效",
+      "tag": "限时 5 折",
+      "link": "/pages/course/detail?id=c1001"
+    },
+    {
+      "id": "b2",
+      "title": "27 考研 · 全程班开课",
+      "subtitle": "名师带学 486 课时 一次上岸",
+      "tag": "火热报名",
+      "link": "/pages/category/category?id=kaoyan"
+    },
+    {
+      "id": "b3",
+      "title": "英语口语 90 天突破",
+      "subtitle": "每天 20 分钟，开口不再结巴",
+      "tag": "打卡返现",
+      "link": "/pages/course/detail?id=c1002"
+    },
+    {
+      "id": "b4",
+      "title": "职场 PPT 设计进阶",
+      "subtitle": "让你的汇报 一眼高级",
+      "tag": "新人 1 元",
+      "link": "/pages/course/detail?id=c1003"
+    },
+    {
+      "id": "b5",
+      "title": "网易严选好课 · 会员日",
+      "subtitle": "百门精品课 折上再减 100",
+      "tag": "会员专享",
+      "link": "/pages/mine/mine"
+    }
+  ],
+  "categoryFilters": {
+    "sorts": [
+      "综合排序",
+      "销量优先",
+      "价格最低",
+      "最新上架"
+    ],
+    "types": [
+      "全部",
+      "免费",
+      "直播",
+      "训练营",
+      "含证书"
+    ]
+  },
+  "categoryList": [
+    {
+      "id": "recommend",
+      "name": "特别推荐",
+      "icon": "fire-filled",
+      "desc": "编辑精选"
+    },
+    {
+      "id": "kaoyan",
+      "name": "考研·升学",
+      "icon": "medal-filled",
+      "desc": "上岸计划"
+    },
+    {
+      "id": "ai",
+      "name": "AI·数字技能",
+      "icon": "paperplane-filled",
+      "desc": "未来能力"
+    },
+    {
+      "id": "english",
+      "name": "英语·留学",
+      "icon": "chatboxes-filled",
+      "desc": "考培留学"
+    },
+    {
+      "id": "office",
+      "name": "职场·办公",
+      "icon": "compose",
+      "desc": "升职加薪"
+    },
+    {
+      "id": "family",
+      "name": "家庭·育儿",
+      "icon": "heart-filled",
+      "desc": "科学养育"
+    },
+    {
+      "id": "design",
+      "name": "设计·摄影",
+      "icon": "image-filled",
+      "desc": "创意美学"
+    },
+    {
+      "id": "cert",
+      "name": "职业·考证",
+      "icon": "auth-filled",
+      "desc": "持证上岗"
+    }
+  ],
+  "checkinInfo": {
+    "checkedToday": false,
+    "continueDays": 12,
+    "todayMinutes": 46,
+    "targetMinutes": 60,
+    "weekMap": [
+      {
+        "day": "一",
+        "done": true
+      },
+      {
+        "day": "二",
+        "done": true
+      },
+      {
+        "day": "三",
+        "done": true
+      },
+      {
+        "day": "四",
+        "done": false
+      },
+      {
+        "day": "五",
+        "done": false
+      },
+      {
+        "day": "六",
+        "done": true
+      },
+      {
+        "day": "日",
+        "done": false
+      }
+    ],
+    "rewardTip": "连续打卡 7 天可得 100 元课程券"
+  },
+  "couponList": [
+    {
+      "id": "cp1",
+      "amount": 100,
+      "threshold": "满 199 可用",
+      "scope": "AI·数字技能专区",
+      "expire": "2026-03-31",
+      "status": "unused"
+    },
+    {
+      "id": "cp2",
+      "amount": 50,
+      "threshold": "满 99 可用",
+      "scope": "全场通用",
+      "expire": "2026-03-20",
+      "status": "unused"
+    },
+    {
+      "id": "cp3",
+      "amount": 30,
+      "threshold": "满 59 可用",
+      "scope": "免费好课配套",
+      "expire": "2026-03-15",
+      "status": "expired"
+    }
+  ],
+  "courseDetail": {
+    "id": "c1001",
+    "title": "AI 大模型应用实战：从提示词到智能体全流程",
+    "subtitle": "68 课时 · 3 位名师 · 配套 12 个实战项目",
+    "tags": [
+      "名师严选",
+      "AI 提效",
+      "含证书"
+    ],
+    "price": 399,
+    "originPrice": 899,
+    "enrolled": 12860,
+    "rating": 4.9,
+    "startTime": "3 月 18 日开课",
+    "lessonCount": 68,
+    "teachers": [
+      {
+        "name": "陈墨白",
+        "title": "前字节 AI 产品负责人"
+      },
+      {
+        "name": "苏晚",
+        "title": "资深视觉设计师"
+      },
+      {
+        "name": "林知远",
+        "title": "教育心理学讲师"
+      }
+    ],
+    "highlights": [
+      "每天 30 分钟，30 天做出可用的 AI 工作流",
+      "50+ 可复用提示词模板",
+      "作业批改 + 社群答疑",
+      "结业项目可写入简历"
+    ],
+    "catalog": [
+      {
+        "chapter": "第一章 · 建立 AI 认知",
+        "lessons": [
+          {
+            "id": "l-1",
+            "title": "大模型能做什么、不能做什么",
+            "duration": "12:30",
+            "free": true
+          },
+          {
+            "id": "l-2",
+            "title": "提示词的四个要素",
+            "duration": "18:20",
+            "free": true
+          },
+          {
+            "id": "l-3",
+            "title": "常见失败案例复盘",
+            "duration": "15:10",
+            "free": false
+          }
+        ]
+      },
+      {
+        "chapter": "第二章 · 办公提效实战",
+        "lessons": [
+          {
+            "id": "l-4",
+            "title": "用 AI 写周报与汇报材料",
+            "duration": "22:40",
+            "free": false
+          },
+          {
+            "id": "l-5",
+            "title": "用 AI 做数据分析与图表",
+            "duration": "26:05",
+            "free": false
+          },
+          {
+            "id": "l-6",
+            "title": "用 AI 批量处理 Excel",
+            "duration": "24:18",
+            "free": false
+          }
+        ]
+      },
+      {
+        "chapter": "第三章 · 智能体（Agent）",
+        "lessons": [
+          {
+            "id": "l-7",
+            "title": "Agent 的组成与工作流",
+            "duration": "28:00",
+            "free": false
+          },
+          {
+            "id": "l-8",
+            "title": "RAG 检索增强实战",
+            "duration": "31:20",
+            "free": false
+          },
+          {
+            "id": "l-9",
+            "title": "结业项目：自动化周报助手",
+            "duration": "42:00",
+            "free": false
+          }
+        ]
+      }
+    ],
+    "comments": [
+      {
+        "user": "学习中的小张",
+        "content": "提示词模板直接抄就能用，周报效率提升明显。",
+        "rating": 5,
+        "date": "3 月 8 日"
+      },
+      {
+        "user": "Amy",
+        "content": "Agent 那章有点快，但配套资料很全，反复看两遍就懂了。",
+        "rating": 4,
+        "date": "3 月 5 日"
+      }
+    ]
+  },
+  "coursesByCategory": {
+    "recommend": [
+      {
+        "id": "c1001",
+        "title": "AI 大模型应用实战：从提示词到智能体全流程",
+        "summary": "一套课打通 AI 办公、写作、编程与智能体搭建。",
+        "price": 399,
+        "tag": "编辑力荐"
+      },
+      {
+        "id": "c1002",
+        "title": "27 考研英语一全程班：阅读 + 写作 + 完形",
+        "summary": "12 年教龄名师带学，配套 486 课时与 3 轮模考。",
+        "price": 599,
+        "tag": "上岸首选"
+      },
+      {
+        "id": "c1003",
+        "title": "职场 PPT 设计进阶：让汇报一眼高级",
+        "summary": "掌握版式、配色与图表，10 节课做出发布会级 PPT。",
+        "price": 129,
+        "tag": "新人 1 元"
+      },
+      {
+        "id": "c1004",
+        "title": "Python 数据分析与自动化办公实战",
+        "summary": "用 Python 处理 Excel、报表与重复工作。",
+        "price": 299,
+        "tag": "0 基础"
+      },
+      {
+        "id": "c1005",
+        "title": "手机摄影构图与后期调色",
+        "summary": "一部手机拍出有故事感的照片。",
+        "price": 99,
+        "tag": "兴趣"
+      }
+    ],
+    "kaoyan": [
+      {
+        "id": "k1",
+        "title": "27 考研数学全程班：高数 + 线代 + 概率",
+        "summary": "逐题精讲 1200 道真题，配套答疑群。",
+        "price": 699,
+        "tag": "热招"
+      },
+      {
+        "id": "k2",
+        "title": "考研政治冲刺押题班",
+        "summary": "时政串讲 + 主观题模板，冲刺 70+。",
+        "price": 299,
+        "tag": "押题"
+      },
+      {
+        "id": "k3",
+        "title": "考研英语二：阅读满分技巧",
+        "summary": "真题同源外刊精读，阅读错 2 个以内。",
+        "price": 399,
+        "tag": "精品"
+      },
+      {
+        "id": "k4",
+        "title": "在职考研时间管理课",
+        "summary": "每天 2 小时，如何高效推进四科复习。",
+        "price": 99,
+        "tag": "免费试学"
+      }
+    ],
+    "ai": [
+      {
+        "id": "a1",
+        "title": "AI 提示词工程：让大模型听懂你的话",
+        "summary": "结构化提示词框架 + 50 个可复用模板。",
+        "price": 199,
+        "tag": "热销"
+      },
+      {
+        "id": "a2",
+        "title": "AI 绘画商业落地：从接单到交付",
+        "summary": "Midjourney / SD 全流程，接单变现路径。",
+        "price": 259,
+        "tag": "变现"
+      },
+      {
+        "id": "a3",
+        "title": "用 AI 做数据分析与可视化",
+        "summary": "不写代码也能完成报表与洞察。",
+        "price": 159,
+        "tag": "提效"
+      },
+      {
+        "id": "a4",
+        "title": "智能体（Agent）开发实战",
+        "summary": "从 RAG 到工作流编排，做出可用的 Agent。",
+        "price": 499,
+        "tag": "进阶"
+      },
+      {
+        "id": "a5",
+        "title": "AI 编程助手高效工作流",
+        "summary": "让 AI 写代码、写测试、做 Code Review。",
+        "price": 219,
+        "tag": "程序员"
+      }
+    ],
+    "english": [
+      {
+        "id": "e1",
+        "title": "英语口语 90 天突破计划",
+        "summary": "每天 20 分钟，AI 陪练纠正发音。",
+        "price": 299,
+        "tag": "打卡返现"
+      },
+      {
+        "id": "e2",
+        "title": "雅思口语 7 分冲刺",
+        "summary": "当季题库 + 一对一模考。",
+        "price": 399,
+        "tag": "留学"
+      },
+      {
+        "id": "e3",
+        "title": "商务英语邮件写作 100 例",
+        "summary": "外贸 / 外企场景全覆盖，即学即用。",
+        "price": 129,
+        "tag": "职场"
+      },
+      {
+        "id": "e4",
+        "title": "零基础音标与自然拼读",
+        "summary": "30 天打牢发音基础。",
+        "price": 0,
+        "tag": "免费"
+      }
+    ],
+    "office": [
+      {
+        "id": "o1",
+        "title": "Excel 高效办公：函数 + 透视表 + BI",
+        "summary": "从做表到做分析，效率提升 10 倍。",
+        "price": 199,
+        "tag": "爆款"
+      },
+      {
+        "id": "o2",
+        "title": "职场沟通与向上管理",
+        "summary": "把话说到点子上，让领导看见你的价值。",
+        "price": 149,
+        "tag": "软技能"
+      },
+      {
+        "id": "o3",
+        "title": "结构化表达与工作汇报",
+        "summary": "金字塔原理落地到周报、月报、述职。",
+        "price": 129,
+        "tag": "晋升"
+      },
+      {
+        "id": "o4",
+        "title": "项目管理入门：PMP 思维实操",
+        "summary": "用一张甘特图管好跨部门协作。",
+        "price": 259,
+        "tag": "考证"
+      }
+    ],
+    "family": [
+      {
+        "id": "f1",
+        "title": "家庭教育指导师系统课",
+        "summary": "沟通、习惯、情绪三大模块，含证书。",
+        "price": 199,
+        "tag": "含证书"
+      },
+      {
+        "id": "f2",
+        "title": "亲子沟通：不吼不叫养育法",
+        "summary": "20 个真实场景的话术拆解。",
+        "price": 89,
+        "tag": "口碑"
+      },
+      {
+        "id": "f3",
+        "title": "儿童专注力训练 30 讲",
+        "summary": "在家就能做的注意力小游戏。",
+        "price": 99,
+        "tag": "实用"
+      },
+      {
+        "id": "f4",
+        "title": "幼小衔接准备课",
+        "summary": "习惯、识字、数感一次准备到位。",
+        "price": 129,
+        "tag": "新上线"
+      }
+    ],
+    "design": [
+      {
+        "id": "d1",
+        "title": "手机摄影构图与后期调色",
+        "summary": "一部手机拍出杂志感大片。",
+        "price": 99,
+        "tag": "热门"
+      },
+      {
+        "id": "d2",
+        "title": "Figma UI 设计从入门到项目",
+        "summary": "组件库 + 设计规范 + 作品集。",
+        "price": 299,
+        "tag": "就业"
+      },
+      {
+        "id": "d3",
+        "title": "视觉配色方法论",
+        "summary": "3 秒选出高级配色，告别土味设计。",
+        "price": 129,
+        "tag": "进阶"
+      },
+      {
+        "id": "d4",
+        "title": "短视频剪辑与运营",
+        "summary": "剪映实操 + 账号冷启动策略。",
+        "price": 169,
+        "tag": "副业"
+      }
+    ],
+    "cert": [
+      {
+        "id": "ce1",
+        "title": "教师资格证笔试无忧班",
+        "summary": "科目一 + 科目二考点速记与刷题。",
+        "price": 159,
+        "tag": "必考"
+      },
+      {
+        "id": "ce2",
+        "title": "初级会计职称高效通关",
+        "summary": "零基础 90 天拿证计划。",
+        "price": 219,
+        "tag": "热门"
+      },
+      {
+        "id": "ce3",
+        "title": "心理咨询师基础培训",
+        "summary": "理论 + 实操 + 案例督导。",
+        "price": 359,
+        "tag": "含证书"
+      },
+      {
+        "id": "ce4",
+        "title": "人力资源管理师二级",
+        "summary": "六大模块精讲 + 真题演练。",
+        "price": 289,
+        "tag": "口碑"
+      }
+    ]
+  },
+  "dailyQuote": {
+    "content": "学习不是把知识装进脑子，而是让知识长在手上。",
+    "author": "来自《默会知识》",
+    "likes": 1286
+  },
+  "freeCourses": [
+    {
+      "id": "fc1",
+      "title": "AI 公开课：提示词入门 7 讲",
+      "teacher": "陈墨白",
+      "lessons": 7,
+      "joined": 32100,
+      "tag": "今日更新",
+      "duration": "1 小时 20 分"
+    },
+    {
+      "id": "fc2",
+      "title": "Excel 函数速查 100 例",
+      "teacher": "周砚",
+      "lessons": 12,
+      "joined": 18420,
+      "tag": "免费",
+      "duration": "2 小时 5 分"
+    },
+    {
+      "id": "fc3",
+      "title": "每天 10 分钟练口语",
+      "teacher": "王雨桐",
+      "lessons": 30,
+      "joined": 15330,
+      "tag": "打卡",
+      "duration": "5 小时"
+    },
+    {
+      "id": "fc4",
+      "title": "零基础音标与自然拼读",
+      "teacher": "王雨桐",
+      "lessons": 18,
+      "joined": 9840,
+      "tag": "免费",
+      "duration": "3 小时 12 分"
+    },
+    {
+      "id": "fc5",
+      "title": "职场礼仪与商务形象",
+      "teacher": "周砚",
+      "lessons": 6,
+      "joined": 6210,
+      "tag": "限免 3 天",
+      "duration": "58 分钟"
+    },
+    {
+      "id": "fc6",
+      "title": "儿童专注力小游戏 20 个",
+      "teacher": "林知远",
+      "lessons": 20,
+      "joined": 4520,
+      "tag": "免费",
+      "duration": "2 小时 40 分"
+    }
+  ],
+  "guessYouLike": [
+    {
+      "id": "g1",
+      "title": "AI 提示词工程：让大模型听懂你的话",
+      "teacher": "陈墨白",
+      "price": 199,
+      "originPrice": 499,
+      "enrolled": 8621,
+      "tag": "AI 热课"
+    },
+    {
+      "id": "g2",
+      "title": "Excel + BI 数据看板实战",
+      "teacher": "周砚",
+      "price": 129,
+      "originPrice": 399,
+      "enrolled": 5210,
+      "tag": "职场必备"
+    },
+    {
+      "id": "g3",
+      "title": "雅思口语 7 分冲刺",
+      "teacher": "王雨桐",
+      "price": 299,
+      "originPrice": 899,
+      "enrolled": 3140,
+      "tag": "留学"
+    },
+    {
+      "id": "g4",
+      "title": "手机摄影构图与后期调色",
+      "teacher": "苏晚",
+      "price": 99,
+      "originPrice": 299,
+      "enrolled": 12080,
+      "tag": "兴趣"
+    },
+    {
+      "id": "g5",
+      "title": "教师资格证笔试无忧班",
+      "teacher": "赵一一",
+      "price": 159,
+      "originPrice": 599,
+      "enrolled": 7420,
+      "tag": "考证"
+    },
+    {
+      "id": "g6",
+      "title": "亲子沟通：不吼不叫养育法",
+      "teacher": "林知远",
+      "price": 89,
+      "originPrice": 269,
+      "enrolled": 9630,
+      "tag": "家庭"
+    }
+  ],
+  "homeCategories": [
+    {
+      "id": "ai",
+      "title": "AI·数字技能",
+      "icon": "paperplane",
+      "color": "#4cd964",
+      "bg": "#e9fbef"
+    },
+    {
+      "id": "kaoyan",
+      "title": "考研·学历",
+      "icon": "medal",
+      "color": "#ff8f1f",
+      "bg": "#fff4e6"
+    },
+    {
+      "id": "english",
+      "title": "英语·留学",
+      "icon": "chatboxes",
+      "color": "#3b9dff",
+      "bg": "#eaf4ff"
+    },
+    {
+      "id": "office",
+      "title": "职场·办公",
+      "icon": "compose",
+      "color": "#8a6cf6",
+      "bg": "#f2eeff"
+    },
+    {
+      "id": "design",
+      "title": "设计·摄影",
+      "icon": "image",
+      "color": "#ff5c8a",
+      "bg": "#ffeef4"
+    },
+    {
+      "id": "selected",
+      "title": "严选好课",
+      "icon": "vip",
+      "color": "#e8a400",
+      "bg": "#fff9e6"
+    },
+    {
+      "id": "free",
+      "title": "免费好课",
+      "icon": "gift",
+      "color": "#2bb14c",
+      "bg": "#e9fbef"
+    },
+    {
+      "id": "openclass",
+      "title": "AI公开课",
+      "icon": "videocam",
+      "color": "#00b3c4",
+      "bg": "#e6fafc"
+    },
+    {
+      "id": "cert",
+      "title": "职业·考证",
+      "icon": "auth",
+      "color": "#ff6b4a",
+      "bg": "#fff0ec"
+    },
+    {
+      "id": "teacher",
+      "title": "AI讲师招募",
+      "icon": "staff",
+      "color": "#5b7cfa",
+      "bg": "#eef1ff"
+    }
+  ],
+  "homeNotices": [
+    "限时特惠：AI 数字技能专场 满 199 减 100",
+    "新课上线：《AI 大模型应用实战》首发 5 折",
+    "恭喜 133****8888 同学获得免费好课名额"
+  ],
+  "learningCourses": [
+    {
+      "id": "lc1",
+      "title": "AI 大模型应用实战",
+      "teacher": "陈墨白",
+      "progress": 62,
+      "lastLesson": "第 42 讲 · 用 Agent 自动化周报",
+      "lastTime": "昨天 21:30",
+      "remainMinutes": 18
+    },
+    {
+      "id": "lc2",
+      "title": "27 考研英语一全程班",
+      "teacher": "李思远",
+      "progress": 28,
+      "lastLesson": "第 26 讲 · 长难句拆分训练",
+      "lastTime": "3 天前",
+      "remainMinutes": 42
+    }
+  ],
+  "liveCourses": [
+    {
+      "id": "l1",
+      "title": "1 小时带你搞懂 AI Agent 到底是什么",
+      "teacherName": "陈墨白",
+      "teacherTitle": "前字节 AI 产品负责人",
+      "liveTime": "今天 20:00",
+      "status": "living",
+      "price": 0,
+      "originPrice": 99,
+      "viewers": 12860
+    },
+    {
+      "id": "l2",
+      "title": "27 考研数学：高数核心题型逐题精讲",
+      "teacherName": "李思远",
+      "teacherTitle": "考研数学 12 年教龄",
+      "liveTime": "今天 21:30",
+      "status": "soon",
+      "price": 9.9,
+      "originPrice": 199,
+      "viewers": 8420
+    },
+    {
+      "id": "l3",
+      "title": "AI 绘画商业落地：从接单到交付",
+      "teacherName": "苏晚",
+      "teacherTitle": "资深视觉设计师",
+      "liveTime": "明天 19:30",
+      "status": "soon",
+      "price": 19.9,
+      "originPrice": 299,
+      "viewers": 6310
+    },
+    {
+      "id": "l4",
+      "title": "职场沟通：如何把话说到点子上",
+      "teacherName": "周砚",
+      "teacherTitle": "500 强企业内训师",
+      "liveTime": "3 月 12 日 20:00",
+      "status": "soon",
+      "price": 0,
+      "originPrice": 99,
+      "viewers": 4150
+    }
+  ],
+  "loginConfig": {
+    "agreements": [
+      "《用户服务协议》",
+      "《隐私政策》"
+    ],
+    "thirdParty": [
+      {
+        "key": "weixin",
+        "label": "微信登录",
+        "icon": "weixin",
+        "color": "#4cd964"
+      },
+      {
+        "key": "qq",
+        "label": "QQ 登录",
+        "icon": "qq",
+        "color": "#3b9dff"
+      },
+      {
+        "key": "weibo",
+        "label": "微博登录",
+        "icon": "weibo",
+        "color": "#ff5c5c"
+      }
+    ]
+  },
+  "memoryCards": [
+    {
+      "id": "mc1",
+      "front": "什么是 RAG？",
+      "back": "检索增强生成（Retrieval-Augmented Generation）：先从知识库检索相关片段，再交给大模型生成答案，可显著降低幻觉。",
+      "tag": "AI 概念",
+      "stage": 2,
+      "nextReview": "今天"
+    },
+    {
+      "id": "mc2",
+      "front": "abandon",
+      "back": "v. 放弃；抛弃\n例句：Never abandon your plan halfway.（永远不要半途放弃你的计划。）",
+      "tag": "考研词汇",
+      "stage": 4,
+      "nextReview": "今天"
+    },
+    {
+      "id": "mc3",
+      "front": "Excel 中 VLOOKUP 的第 4 个参数为 FALSE 表示什么？",
+      "back": "精确匹配。找不到完全一致的值时返回 #N/A，是数据核对场景中最常用的写法。",
+      "tag": "办公技能",
+      "stage": 1,
+      "nextReview": "今天"
+    },
+    {
+      "id": "mc4",
+      "front": "「默会知识」指什么？",
+      "back": "难以用语言完整表达、只能通过实践与师徒相传获得的经验性知识，如老中医的望闻问切、老师傅的手感。",
+      "tag": "通识",
+      "stage": 3,
+      "nextReview": "明天"
+    }
+  ],
+  "mineGridGroups": [
+    {
+      "title": "我的服务",
+      "items": [
+        {
+          "key": "order",
+          "label": "我的订单",
+          "icon": "list",
+          "path": "/pages/mine/order"
+        },
+        {
+          "key": "vip",
+          "label": "会员中心",
+          "icon": "vip",
+          "path": "/pages/mine/mine"
+        },
+        {
+          "key": "coupon",
+          "label": "优惠券",
+          "icon": "gift",
+          "path": "/pages/mine/mine"
+        },
+        {
+          "key": "report",
+          "label": "学习报告",
+          "icon": "medal",
+          "path": "/pages/study/report"
+        },
+        {
+          "key": "download",
+          "label": "离线下载",
+          "icon": "cloud-download",
+          "path": "/pages/mine/mine"
+        },
+        {
+          "key": "note",
+          "label": "我的笔记",
+          "icon": "compose",
+          "path": "/pages/mine/mine"
+        },
+        {
+          "key": "wrong",
+          "label": "我的错题",
+          "icon": "trash",
+          "path": "/pages/study/wrong"
+        },
+        {
+          "key": "auth",
+          "label": "实名认证",
+          "icon": "auth",
+          "path": "/pages/mine/settings"
+        }
+      ]
+    },
+    {
+      "title": "更多",
+      "items": [
+        {
+          "key": "service",
+          "label": "在线客服",
+          "icon": "chat",
+          "path": "/pages/mine/mine"
+        },
+        {
+          "key": "help",
+          "label": "帮助中心",
+          "icon": "help",
+          "path": "/pages/mine/mine"
+        },
+        {
+          "key": "feedback",
+          "label": "意见反馈",
+          "icon": "mail-open",
+          "path": "/pages/mine/mine"
+        },
+        {
+          "key": "about",
+          "label": "关于我们",
+          "icon": "info",
+          "path": "/pages/mine/mine"
+        }
+      ]
+    }
+  ],
+  "mineStats": [
+    {
+      "key": "course",
+      "label": "我的课程",
+      "value": 12,
+      "path": "/pages/mine/my-course"
+    },
+    {
+      "key": "collect",
+      "label": "我的收藏",
+      "value": 36,
+      "path": "/pages/mine/my-course?tab=collect"
+    },
+    {
+      "key": "coupon",
+      "label": "优惠券",
+      "value": 5,
+      "path": "/pages/mine/mine"
+    },
+    {
+      "key": "points",
+      "label": "积分",
+      "value": 2860,
+      "path": "/pages/mine/mine"
+    }
+  ],
+  "mockQuestions": [
+    {
+      "id": "q-1",
+      "type": "single",
+      "stem": "在使用大语言模型时，「提示词（Prompt）」最核心的作用是什么？",
+      "options": [
+        {
+          "key": "A",
+          "text": "让模型运行得更快"
+        },
+        {
+          "key": "B",
+          "text": "约束并引导模型输出符合预期的结果"
+        },
+        {
+          "key": "C",
+          "text": "降低 API 调用费用"
+        },
+        {
+          "key": "D",
+          "text": "提升模型的参数量"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "analysis": "提示词的本质是「输入约束」：通过角色设定、任务描述、输出格式与示例，把模型的输出空间收窄到我们需要的范围内。它不改变模型规模与推理速度。",
+      "knowledge": "提示词工程 · 基础概念"
+    },
+    {
+      "id": "q-2",
+      "type": "multiple",
+      "stem": "以下哪些做法可以有效提升 AI 生成内容的质量？（多选）",
+      "options": [
+        {
+          "key": "A",
+          "text": "给出具体的输出格式要求"
+        },
+        {
+          "key": "B",
+          "text": "提供 1-2 个优质示例（Few-shot）"
+        },
+        {
+          "key": "C",
+          "text": "一次性把所有需求堆在一句话里"
+        },
+        {
+          "key": "D",
+          "text": "让模型先给出思路再给结论"
+        }
+      ],
+      "answer": [
+        "A",
+        "B",
+        "D"
+      ],
+      "analysis": "结构化约束、示例引导、分步思考都能显著提升质量；而把需求堆成一句话会稀释重点，反而更容易遗漏关键要求。",
+      "knowledge": "提示词工程 · 进阶技巧"
+    },
+    {
+      "id": "q-3",
+      "type": "judge",
+      "stem": "「深度思考」模式会显著增加响应时间，但对于需要推理的任务通常能提升准确率。",
+      "options": [
+        {
+          "key": "A",
+          "text": "正确"
+        },
+        {
+          "key": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "analysis": "推理链会消耗更多生成 token，因此更慢；但在数学、逻辑、多步推理任务上准确率通常更高。",
+      "knowledge": "AI 使用实践"
+    }
+  ],
+  "myCourses": {
+    "learning": [
+      {
+        "id": "mc-1",
+        "title": "AI 大模型应用实战",
+        "progress": 62,
+        "teacher": "陈墨白",
+        "lastLesson": "第 42 讲 · 用 Agent 自动化周报"
+      },
+      {
+        "id": "mc-2",
+        "title": "27 考研英语一全程班",
+        "progress": 28,
+        "teacher": "李思远",
+        "lastLesson": "第 26 讲 · 长难句拆分训练"
+      },
+      {
+        "id": "mc-3",
+        "title": "Excel 高效办公",
+        "progress": 100,
+        "teacher": "周砚",
+        "lastLesson": "已学完全部 32 讲"
+      }
+    ],
+    "finished": [
+      {
+        "id": "mc-4",
+        "title": "家庭教育指导师系统课",
+        "progress": 100,
+        "teacher": "林知远",
+        "lastLesson": "已获得结业证书"
+      }
+    ],
+    "collect": [
+      {
+        "id": "mc-5",
+        "title": "Figma UI 设计从入门到项目",
+        "progress": 0,
+        "teacher": "苏晚",
+        "lastLesson": "尚未开始"
+      },
+      {
+        "id": "mc-6",
+        "title": "初会职称高效通关",
+        "progress": 0,
+        "teacher": "赵一一",
+        "lastLesson": "尚未开始"
+      }
+    ]
+  },
+  "orderList": [
+    {
+      "id": "od1",
+      "title": "AI 大模型应用实战",
+      "price": 399,
+      "status": "已完成",
+      "date": "2026-03-01",
+      "type": "course"
+    },
+    {
+      "id": "od2",
+      "title": "27 考研英语一全程班",
+      "price": 599,
+      "status": "待付款",
+      "date": "2026-03-09",
+      "type": "course"
+    },
+    {
+      "id": "od3",
+      "title": "网易云课堂会员年卡",
+      "price": 365,
+      "status": "已完成",
+      "date": "2026-02-18",
+      "type": "vip"
+    },
+    {
+      "id": "od4",
+      "title": "PPT 设计进阶",
+      "price": 129,
+      "status": "已退款",
+      "date": "2026-01-22",
+      "type": "course"
+    }
+  ],
+  "qualityCourses": [
+    {
+      "id": "q1",
+      "tags": [
+        "名师严选",
+        "AI 提效"
+      ],
+      "title": "AI 大模型应用实战：从提示词到智能体全流程",
+      "startTime": "3 月 18 日开课",
+      "lessonCount": 68,
+      "teachers": [
+        {
+          "name": "陈墨白"
+        },
+        {
+          "name": "苏晚"
+        },
+        {
+          "name": "林知远"
+        }
+      ],
+      "price": 399,
+      "originPrice": 899,
+      "enrolled": 12860
+    },
+    {
+      "id": "q2",
+      "tags": [
+        "上岸必备"
+      ],
+      "title": "27 考研英语一全程班：阅读 + 写作 + 完形一次搞定",
+      "startTime": "3 月 20 日开课",
+      "lessonCount": 126,
+      "teachers": [
+        {
+          "name": "李思远"
+        },
+        {
+          "name": "王雨桐"
+        }
+      ],
+      "price": 599,
+      "originPrice": 1280,
+      "enrolled": 24680
+    },
+    {
+      "id": "q3",
+      "tags": [
+        "0 基础可学",
+        "就业推荐"
+      ],
+      "title": "Python 数据分析与自动化办公实战",
+      "startTime": "3 月 25 日开课",
+      "lessonCount": 54,
+      "teachers": [
+        {
+          "name": "周砚"
+        }
+      ],
+      "price": 299,
+      "originPrice": 699,
+      "enrolled": 9370
+    },
+    {
+      "id": "q4",
+      "tags": [
+        "限时特惠",
+        "含证书"
+      ],
+      "title": "家庭教育指导师：从沟通到习惯养成的系统方法",
+      "startTime": "4 月 2 日开课",
+      "lessonCount": 42,
+      "teachers": [
+        {
+          "name": "林知远"
+        },
+        {
+          "name": "赵一一"
+        }
+      ],
+      "price": 199,
+      "originPrice": 499,
+      "enrolled": 5210
+    }
+  ],
+  "questionBanks": [
+    {
+      "id": "qb1",
+      "name": "AI 基础能力测验",
+      "count": 320,
+      "done": 186,
+      "correctRate": 82,
+      "icon": "paperplane"
+    },
+    {
+      "id": "qb2",
+      "name": "考研英语核心词汇",
+      "count": 1200,
+      "done": 640,
+      "correctRate": 76,
+      "icon": "chatboxes"
+    },
+    {
+      "id": "qb3",
+      "name": "Office 办公实操题",
+      "count": 180,
+      "done": 92,
+      "correctRate": 88,
+      "icon": "compose"
+    },
+    {
+      "id": "qb4",
+      "name": "教师资格证 · 教育知识",
+      "count": 860,
+      "done": 210,
+      "correctRate": 71,
+      "icon": "auth"
+    },
+    {
+      "id": "qb5",
+      "name": "初级会计实务",
+      "count": 540,
+      "done": 88,
+      "correctRate": 69,
+      "icon": "wallet"
+    }
+  ],
+  "rankings": [
+    {
+      "key": "hot",
+      "title": "热销榜",
+      "list": [
+        {
+          "rank": 1,
+          "name": "AI 大模型应用实战",
+          "price": 399,
+          "heat": 9862
+        },
+        {
+          "rank": 2,
+          "name": "27 考研英语一全程班",
+          "price": 599,
+          "heat": 8210
+        },
+        {
+          "rank": 3,
+          "name": "Python 数据分析实战",
+          "price": 299,
+          "heat": 6543
+        }
+      ]
+    },
+    {
+      "key": "new",
+      "title": "新课榜",
+      "list": [
+        {
+          "rank": 1,
+          "name": "AI 绘画商业落地营",
+          "price": 259,
+          "heat": 5320
+        },
+        {
+          "rank": 2,
+          "name": "小红书运营从 0 到 1",
+          "price": 199,
+          "heat": 4180
+        },
+        {
+          "rank": 3,
+          "name": "高效能职场沟通课",
+          "price": 129,
+          "heat": 3960
+        }
+      ]
+    },
+    {
+      "key": "free",
+      "title": "免费榜",
+      "list": [
+        {
+          "rank": 1,
+          "name": "AI 公开课：提示词入门",
+          "price": 0,
+          "heat": 32100
+        },
+        {
+          "rank": 2,
+          "name": "Excel 函数速查 100 例",
+          "price": 0,
+          "heat": 18420
+        },
+        {
+          "rank": 3,
+          "name": "每天 10 分钟练口语",
+          "price": 0,
+          "heat": 15330
+        }
+      ]
+    }
+  ],
+  "searchData": {
+    "history": [
+      "AI 提示词",
+      "考研英语一",
+      "Excel 函数",
+      "Figma"
+    ],
+    "hot": [
+      {
+        "word": "AI 大模型实战",
+        "tag": "热"
+      },
+      {
+        "word": "27 考研全程班",
+        "tag": "新"
+      },
+      {
+        "word": "口语 90 天",
+        "tag": ""
+      },
+      {
+        "word": "Excel 自动化",
+        "tag": "荐"
+      },
+      {
+        "word": "教师资格证",
+        "tag": ""
+      },
+      {
+        "word": "手机摄影",
+        "tag": ""
+      }
+    ],
+    "discover": [
+      "免费好课",
+      "AI 公开课",
+      "0 基础转行",
+      "含证书",
+      "名师严选",
+      "限时特惠"
+    ]
+  },
+  "searchPool": [
+    {
+      "id": "c1001",
+      "title": "AI 大模型应用实战：从提示词到智能体全流程",
+      "summary": "一套课打通 AI 办公、写作、编程与智能体搭建。",
+      "price": 399,
+      "tag": "编辑力荐"
+    },
+    {
+      "id": "c1002",
+      "title": "27 考研英语一全程班：阅读 + 写作 + 完形",
+      "summary": "12 年教龄名师带学，配套 486 课时与 3 轮模考。",
+      "price": 599,
+      "tag": "上岸首选"
+    },
+    {
+      "id": "c1003",
+      "title": "职场 PPT 设计进阶：让汇报一眼高级",
+      "summary": "掌握版式、配色与图表，10 节课做出发布会级 PPT。",
+      "price": 129,
+      "tag": "新人 1 元"
+    },
+    {
+      "id": "c1004",
+      "title": "Python 数据分析与自动化办公实战",
+      "summary": "用 Python 处理 Excel、报表与重复工作。",
+      "price": 299,
+      "tag": "0 基础"
+    },
+    {
+      "id": "c1005",
+      "title": "手机摄影构图与后期调色",
+      "summary": "一部手机拍出有故事感的照片。",
+      "price": 99,
+      "tag": "兴趣"
+    },
+    {
+      "id": "a1",
+      "title": "AI 提示词工程：让大模型听懂你的话",
+      "summary": "结构化提示词框架 + 50 个可复用模板。",
+      "price": 199,
+      "tag": "热销"
+    },
+    {
+      "id": "a2",
+      "title": "AI 绘画商业落地：从接单到交付",
+      "summary": "Midjourney / SD 全流程，接单变现路径。",
+      "price": 259,
+      "tag": "变现"
+    },
+    {
+      "id": "a3",
+      "title": "用 AI 做数据分析与可视化",
+      "summary": "不写代码也能完成报表与洞察。",
+      "price": 159,
+      "tag": "提效"
+    },
+    {
+      "id": "a4",
+      "title": "智能体（Agent）开发实战",
+      "summary": "从 RAG 到工作流编排，做出可用的 Agent。",
+      "price": 499,
+      "tag": "进阶"
+    },
+    {
+      "id": "a5",
+      "title": "AI 编程助手高效工作流",
+      "summary": "让 AI 写代码、写测试、做 Code Review。",
+      "price": 219,
+      "tag": "程序员"
+    },
+    {
+      "id": "k1",
+      "title": "27 考研数学全程班：高数 + 线代 + 概率",
+      "summary": "逐题精讲 1200 道真题，配套答疑群。",
+      "price": 699,
+      "tag": "热招"
+    },
+    {
+      "id": "k2",
+      "title": "考研政治冲刺押题班",
+      "summary": "时政串讲 + 主观题模板，冲刺 70+。",
+      "price": 299,
+      "tag": "押题"
+    },
+    {
+      "id": "k3",
+      "title": "考研英语二：阅读满分技巧",
+      "summary": "真题同源外刊精读，阅读错 2 个以内。",
+      "price": 399,
+      "tag": "精品"
+    },
+    {
+      "id": "k4",
+      "title": "在职考研时间管理课",
+      "summary": "每天 2 小时，如何高效推进四科复习。",
+      "price": 99,
+      "tag": "免费试学"
+    },
+    {
+      "id": "e1",
+      "title": "英语口语 90 天突破计划",
+      "summary": "每天 20 分钟，AI 陪练纠正发音。",
+      "price": 299,
+      "tag": "打卡返现"
+    },
+    {
+      "id": "e2",
+      "title": "雅思口语 7 分冲刺",
+      "summary": "当季题库 + 一对一模考。",
+      "price": 399,
+      "tag": "留学"
+    },
+    {
+      "id": "e3",
+      "title": "商务英语邮件写作 100 例",
+      "summary": "外贸 / 外企场景全覆盖，即学即用。",
+      "price": 129,
+      "tag": "职场"
+    },
+    {
+      "id": "e4",
+      "title": "零基础音标与自然拼读",
+      "summary": "30 天打牢发音基础。",
+      "price": 0,
+      "tag": "免费"
+    },
+    {
+      "id": "o1",
+      "title": "Excel 高效办公：函数 + 透视表 + BI",
+      "summary": "从做表到做分析，效率提升 10 倍。",
+      "price": 199,
+      "tag": "爆款"
+    },
+    {
+      "id": "o2",
+      "title": "职场沟通与向上管理",
+      "summary": "把话说到点子上，让领导看见你的价值。",
+      "price": 149,
+      "tag": "软技能"
+    },
+    {
+      "id": "o3",
+      "title": "结构化表达与工作汇报",
+      "summary": "金字塔原理落地到周报、月报、述职。",
+      "price": 129,
+      "tag": "晋升"
+    },
+    {
+      "id": "o4",
+      "title": "项目管理入门：PMP 思维实操",
+      "summary": "用一张甘特图管好跨部门协作。",
+      "price": 259,
+      "tag": "考证"
+    },
+    {
+      "id": "d1",
+      "title": "手机摄影构图与后期调色",
+      "summary": "一部手机拍出杂志感大片。",
+      "price": 99,
+      "tag": "热门"
+    },
+    {
+      "id": "d2",
+      "title": "Figma UI 设计从入门到项目",
+      "summary": "组件库 + 设计规范 + 作品集。",
+      "price": 299,
+      "tag": "就业"
+    },
+    {
+      "id": "d3",
+      "title": "视觉配色方法论",
+      "summary": "3 秒选出高级配色，告别土味设计。",
+      "price": 129,
+      "tag": "进阶"
+    },
+    {
+      "id": "d4",
+      "title": "短视频剪辑与运营",
+      "summary": "剪映实操 + 账号冷启动策略。",
+      "price": 169,
+      "tag": "副业"
+    },
+    {
+      "id": "f1",
+      "title": "家庭教育指导师系统课",
+      "summary": "沟通、习惯、情绪三大模块，含证书。",
+      "price": 199,
+      "tag": "含证书"
+    },
+    {
+      "id": "f2",
+      "title": "亲子沟通：不吼不叫养育法",
+      "summary": "20 个真实场景的话术拆解。",
+      "price": 89,
+      "tag": "口碑"
+    },
+    {
+      "id": "f3",
+      "title": "儿童专注力训练 30 讲",
+      "summary": "在家就能做的注意力小游戏。",
+      "price": 99,
+      "tag": "实用"
+    },
+    {
+      "id": "f4",
+      "title": "幼小衔接准备课",
+      "summary": "习惯、识字、数感一次准备到位。",
+      "price": 129,
+      "tag": "新上线"
+    },
+    {
+      "id": "ce1",
+      "title": "教师资格证笔试无忧班",
+      "summary": "科目一 + 科目二考点速记与刷题。",
+      "price": 159,
+      "tag": "必考"
+    },
+    {
+      "id": "ce2",
+      "title": "初级会计职称高效通关",
+      "summary": "零基础 90 天拿证计划。",
+      "price": 219,
+      "tag": "热门"
+    },
+    {
+      "id": "ce3",
+      "title": "心理咨询师基础培训",
+      "summary": "理论 + 实操 + 案例督导。",
+      "price": 359,
+      "tag": "含证书"
+    },
+    {
+      "id": "ce4",
+      "title": "人力资源管理师二级",
+      "summary": "六大模块精讲 + 真题演练。",
+      "price": 289,
+      "tag": "口碑"
+    }
+  ],
+  "seckill": {
+    "title": "限时特惠",
+    "subtitle": "每日 10:00 开抢",
+    "endTime": 12312,
+    "list": [
+      {
+        "id": "s1",
+        "name": "AI 提效训练营",
+        "price": 99,
+        "originPrice": 399,
+        "soldPercent": 82
+      },
+      {
+        "id": "s2",
+        "name": "考研英语全程班",
+        "price": 199,
+        "originPrice": 899,
+        "soldPercent": 64
+      },
+      {
+        "id": "s3",
+        "name": "PPT 设计进阶",
+        "price": 49,
+        "originPrice": 199,
+        "soldPercent": 91
+      },
+      {
+        "id": "s4",
+        "name": "Python 数据分析",
+        "price": 129,
+        "originPrice": 599,
+        "soldPercent": 47
+      },
+      {
+        "id": "s5",
+        "name": "家庭教育指导课",
+        "price": 69,
+        "originPrice": 299,
+        "soldPercent": 73
+      }
+    ]
+  },
+  "settingGroups": [
+    {
+      "title": "账号",
+      "items": [
+        {
+          "key": "avatar",
+          "label": "头像",
+          "type": "avatar"
+        },
+        {
+          "key": "nickname",
+          "label": "昵称",
+          "type": "text",
+          "value": "陈昊"
+        },
+        {
+          "key": "phone",
+          "label": "手机号",
+          "type": "text",
+          "value": "133****8888"
+        },
+        {
+          "key": "password",
+          "label": "修改密码",
+          "type": "link"
+        },
+        {
+          "key": "bind",
+          "label": "第三方账号绑定",
+          "type": "text",
+          "value": "已绑定微信"
+        }
+      ]
+    },
+    {
+      "title": "学习偏好",
+      "items": [
+        {
+          "key": "push",
+          "label": "学习提醒",
+          "type": "switch",
+          "value": true
+        },
+        {
+          "key": "download",
+          "label": "仅 WLAN 下缓存视频",
+          "type": "switch",
+          "value": true
+        },
+        {
+          "key": "speed",
+          "label": "默认播放倍速",
+          "type": "text",
+          "value": "1.0x"
+        },
+        {
+          "key": "quality",
+          "label": "默认清晰度",
+          "type": "text",
+          "value": "高清 720P"
+        }
+      ]
+    },
+    {
+      "title": "隐私与安全",
+      "items": [
+        {
+          "key": "visible",
+          "label": "学习记录公开",
+          "type": "switch",
+          "value": false
+        },
+        {
+          "key": "personal",
+          "label": "个性化推荐",
+          "type": "switch",
+          "value": true
+        },
+        {
+          "key": "cache",
+          "label": "清除缓存",
+          "type": "text",
+          "value": "128.6 MB"
+        },
+        {
+          "key": "privacy",
+          "label": "隐私政策",
+          "type": "link"
+        }
+      ]
+    }
+  ],
+  "studyEntries": [
+    {
+      "key": "question",
+      "title": "必刷题库",
+      "desc": "12 个题库 · 今日待刷 20 题",
+      "icon": "checkbox-filled",
+      "color": "#4cd964",
+      "bg": "#e9fbef",
+      "path": "/pages/study/question"
+    },
+    {
+      "key": "memory",
+      "title": "记忆练习",
+      "desc": "今日待复习 36 张卡片",
+      "icon": "refresh-filled",
+      "color": "#3b9dff",
+      "bg": "#eaf4ff",
+      "path": "/pages/study/memory"
+    },
+    {
+      "key": "wrong",
+      "title": "错题本",
+      "desc": "累计 48 题 · 本周新增 6",
+      "icon": "trash-filled",
+      "color": "#ff5c1a",
+      "bg": "#fff0ec",
+      "path": "/pages/study/wrong"
+    },
+    {
+      "key": "free",
+      "title": "免费好课",
+      "desc": "每日更新 · 共 328 门",
+      "icon": "gift-filled",
+      "color": "#8a6cf6",
+      "bg": "#f2eeff",
+      "path": "/pages/study/free"
+    }
+  ],
+  "studyOverview": {
+    "nickname": "陈昊",
+    "continueDays": 12,
+    "todayMinutes": 46,
+    "weekMinutes": [
+      32,
+      55,
+      18,
+      46,
+      0,
+      61,
+      24
+    ],
+    "totalHours": 126,
+    "finishedLessons": 284,
+    "rankPercent": 8,
+    "medals": 6
+  },
+  "studyReport": {
+    "week": "3 月 4 日 - 3 月 10 日",
+    "totalMinutes": 268,
+    "dayAvgMinutes": 38,
+    "rankText": "超过 92% 的同学",
+    "bestDay": "周六 · 学习 61 分钟",
+    "chart": [
+      {
+        "day": "周一",
+        "minutes": 32
+      },
+      {
+        "day": "周二",
+        "minutes": 55
+      },
+      {
+        "day": "周三",
+        "minutes": 18
+      },
+      {
+        "day": "周四",
+        "minutes": 46
+      },
+      {
+        "day": "周五",
+        "minutes": 0
+      },
+      {
+        "day": "周六",
+        "minutes": 61
+      },
+      {
+        "day": "周日",
+        "minutes": 24
+      }
+    ],
+    "ability": [
+      {
+        "name": "知识记忆",
+        "value": 82
+      },
+      {
+        "name": "刷题正确率",
+        "value": 76
+      },
+      {
+        "name": "学习坚持度",
+        "value": 91
+      },
+      {
+        "name": "课程完成度",
+        "value": 64
+      }
+    ],
+    "suggestion": "你在「课程完成度」上偏弱，建议把长课拆成 15 分钟小段，用碎片时间推进。"
+  },
+  "studyTasks": [
+    {
+      "id": "t1",
+      "title": "刷 20 道 AI 基础题",
+      "done": 12,
+      "total": 20,
+      "reward": "+20 积分",
+      "type": "question"
+    },
+    {
+      "id": "t2",
+      "title": "复习 36 张记忆卡",
+      "done": 0,
+      "total": 36,
+      "reward": "+30 积分",
+      "type": "memory"
+    },
+    {
+      "id": "t3",
+      "title": "观看 1 节课程视频",
+      "done": 1,
+      "total": 1,
+      "reward": "已完成",
+      "type": "video",
+      "finished": true
+    },
+    {
+      "id": "t4",
+      "title": "整理 3 道错题",
+      "done": 1,
+      "total": 3,
+      "reward": "+15 积分",
+      "type": "wrong"
+    }
+  ],
+  "userInfo": {
+    "id": "u10086",
+    "nickname": "陈昊",
+    "phone": "133****8888",
+    "avatarText": "陈",
+    "level": "V4 学习达人",
+    "levelProgress": 68,
+    "nextLevelTip": "再学习 3 小时可升级 V5",
+    "points": 2860,
+    "isVip": true,
+    "vipExpire": "2026-03-18",
+    "signature": "每天进步一点点"
+  },
+  "wrongQuestions": [
+    {
+      "id": "w1",
+      "bank": "AI 基础能力测验",
+      "stem": "关于「模型幻觉」，下列说法正确的是？",
+      "myAnswer": "C",
+      "answer": "B",
+      "reason": "概念混淆",
+      "date": "3 月 10 日",
+      "wrongTimes": 2,
+      "mastered": false
+    },
+    {
+      "id": "w2",
+      "bank": "考研英语核心词汇",
+      "stem": "The committee ___ the proposal after a long debate.",
+      "myAnswer": "A",
+      "answer": "D",
+      "reason": "词义辨析",
+      "date": "3 月 9 日",
+      "wrongTimes": 1,
+      "mastered": false
+    },
+    {
+      "id": "w3",
+      "bank": "Office 办公实操题",
+      "stem": "Excel 中要对数据进行多条件求和，应使用哪个函数？",
+      "myAnswer": "B",
+      "answer": "C",
+      "reason": "函数记错",
+      "date": "3 月 6 日",
+      "wrongTimes": 3,
+      "mastered": true
+    }
+  ]
+}

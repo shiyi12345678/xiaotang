@@ -1,3 +1,3 @@
-# uni-swipe-action-item · 滑动操作项
+# uni-swipe-action-item
 
-uni-ui 滑动操作项，含多端（微信 / 支付宝 / H5 等）实现。
+滑动操作项组件。

@@ -1,3 +1,3 @@
-# uni-rate · 评分组件
+# uni-rate
 
-uni-ui 评分组件。
+评分组件。

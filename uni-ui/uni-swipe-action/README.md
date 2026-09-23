@@ -1,3 +1,3 @@
-# uni-swipe-action · 滑动操作
+# uni-swipe-action
 
-uni-ui 滑动操作容器组件。
+滑动操作组件。

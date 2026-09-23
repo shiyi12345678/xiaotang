@@ -1,3 +1,3 @@
-# uni-collapse-item · 折叠面板项
+# uni-collapse-item
 
-uni-ui 折叠面板单项组件。
+折叠面板项组件。

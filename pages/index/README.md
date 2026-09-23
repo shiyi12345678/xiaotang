@@ -1,3 +1,3 @@
-# pages/index · 首页
+# index
 
-`index.vue`：求职者首页（职位推荐流）。
+首页（职位推荐）。

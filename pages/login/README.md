@@ -1,3 +1,3 @@
-# pages/login · 登录
+# login
 
-`login.vue`：登录 / 注册（邮箱验证码）。
+登录页。

@@ -1,3 +1,3 @@
-# zn-company-logo · 公司 Logo 组件
+# zn-company-logo
 
-CSS 绘制的公司 Logo 占位/展示。
+公司 Logo 组件。

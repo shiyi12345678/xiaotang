@@ -1,3 +1,3 @@
-# uni-transition · 过渡动画
+# uni-transition
 
-uni-ui 过渡动画组件。
+过渡动画组件。

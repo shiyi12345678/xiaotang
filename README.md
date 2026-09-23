@@ -14,18 +14,16 @@
 
 ## 目录结构
 
-```
-├── pages/         # 30 个页面（求职者端 + HR 端 + 公共）
-├── components/    # 10 个公共组件（zn-* 前缀）
-├── services/      # 前端接口封装层（页面不直接拼 URL）
-├── common/        # 配置与工具函数
-├── uni-ui/        # uni-ui 组件库（仅用到的部分）
-├── server/        # FastAPI 后端
-│   ├── app/       # 路由 / 模型 / 核心（LLM、RAG、邮件、安全）
-│   ├── seed/      # 种子数据（recruit_*.json 招聘内容）
-│   └── docs/      # RAG / 部署说明
-└── docs/          # 项目文档（架构说明 / 部署手册）
-```
+| 文件夹 | 作用 |
+| --- | --- |
+| `pages/` | 业务页面（求职者端、企业 HR 端、公共） |
+| `components/` | 公共业务组件（zn-* 前缀） |
+| `services/` | 前端接口封装层 |
+| `common/` | 全局配置与工具函数 |
+| `uni-ui/` | uni-ui 组件库（仅用到的部分） |
+| `server/` | FastAPI 后端（详见 server/README.md） |
+| `docs/` | 项目文档（架构说明、设计规范、部署方案） |
+| `tools/` | 项目自检与校验脚本 |
 
 ## 快速开始
 
